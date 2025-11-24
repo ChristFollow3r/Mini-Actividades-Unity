@@ -7,9 +7,9 @@ public class multiplyScript : MonoBehaviour
     void Start()
     {
 
-        for (int i = 1; i < 11; i++)
+        for (int i = 0; i < 10; i++)
         {
-            Debug.Log(number * i);
+            Debug.Log(number * (i + 1));
         }
 
     }
