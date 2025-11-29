@@ -4,13 +4,15 @@ public class RPSBestOfFive : MonoBehaviour
 {
     void Start()
     {
-        int num1 = Random.Range(1, 4);
-        int num2 = Random.Range(1, 4);
         int num1Counter = 0;
         int num2Counter = 0;
 
         while (num1Counter != 5 || num2Counter != 5)
         {
+
+            int num1 = Random.Range(1, 4);
+            int num2 = Random.Range(1, 4);
+
             if (num1 == num2)
             {
                 Debug.Log("It's a tie.");
