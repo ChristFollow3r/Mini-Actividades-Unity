@@ -7,7 +7,7 @@ public class RPSBestOfFive : MonoBehaviour
         int num1Counter = 0;
         int num2Counter = 0;
 
-        while (num1Counter != 5 || num2Counter != 5)
+        while (true)
         {
 
             int num1 = Random.Range(1, 4);
@@ -64,6 +64,20 @@ public class RPSBestOfFive : MonoBehaviour
                 num1Counter++;
                 Debug.Log("Console 1 points: " + num1Counter);
                 Debug.Log("Console 2 points: " + num2Counter);
+            }
+
+            if (num1Counter == 5 || num2Counter == 5)
+            {
+                if (num1Counter == 5)
+                {
+                    Debug.Log("Console 1 wins!");
+                }
+
+                else
+                {
+                    Debug.Log("Console 2 wins!");
+                }
+                break;
             }
         }
 
