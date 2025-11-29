@@ -1,3 +1,4 @@
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class RPSBestOfFive : MonoBehaviour
@@ -79,12 +80,6 @@ public class RPSBestOfFive : MonoBehaviour
                 }
                 break;
             }
-        }
-
-
-        void Update()
-        {
-
         }
     }
 }
