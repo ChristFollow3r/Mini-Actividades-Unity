@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class RPS : MonoBehaviour
 {
-    public int userNumber;
+    public enum userNumber { Rock = 1, Paper, Scissors };
+    public userNumber choseYourPokemon;
 
     void Start()
     {
@@ -20,17 +21,17 @@ public class RPS : MonoBehaviour
         switch (rpsNumber)
         {
             case 1:
-                if (userNumber == 1)
+                if (choseYourPokemon == userNumber.Rock)
                 {
                     Debug.Log("Rock!");
                     Debug.Log("Its a tie.");
                 }
-                else if (userNumber == 2)
+                else if (choseYourPokemon == userNumber.Paper)
                 {
                     Debug.Log("Rock!");
                     Debug.Log("User wins!");
                 }
-                else if (userNumber == 3)
+                else if (choseYourPokemon == userNumber.Scissors)
                 {
                     Debug.Log("Rock!");
                     Debug.Log("Console wins!");
@@ -38,36 +39,36 @@ public class RPS : MonoBehaviour
 
                 break;
             case 2:
-                if (userNumber == 2)
+                if (choseYourPokemon == userNumber.Paper)
                 {
                     Debug.Log("Paper");
                     Debug.Log("Its a tie.");
                 }
-                else if (userNumber == 1)
+                else if (choseYourPokemon == userNumber.Rock)
                 {
                     Debug.Log("Paper");
                     Debug.Log("Console wins!");
                 }
-                else if (userNumber == 3)
+                else if (choseYourPokemon == userNumber.Scissors)
                 {
                     Debug.Log("Paper");
                     Debug.Log("User wins!");
                 }
                 break;
             case 3:
-                if (userNumber == 3)
+                if (choseYourPokemon == userNumber.Scissors)
                 {
                     Debug.Log("Scissors");
                     Debug.Log("Its a tie.");
                 }
-                else if (userNumber == 2)
+                else if (choseYourPokemon == userNumber.Paper)
                 {
                     Debug.Log("Scissors");
                     Debug.Log("Console wins!");
                 }
-                else if (userNumber == 3)
+                else if (choseYourPokemon == userNumber.Rock)
                 {
-
+                    Debug.Log("Scissors");
                     Debug.Log("User wins!");
                 }
                 break;
