@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class BruhMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 9f; // Mega massive yoink from the last exercise
+    [SerializeField] private float speed = 7f;
     [SerializeField] private Rigidbody2D square;
     private InputSystem_Actions inputSystem_actions;
     private void Awake()
@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         square.transform.Translate(GetMovement() * speed * Time.deltaTime);
-        Debug.Log(GetMovement());
     }
 
     Vector2 GetMovement()

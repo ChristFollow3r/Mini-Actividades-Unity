@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 7f;
+    [SerializeField] private float speed = 9f; // Mega massive yoink from the last exercise
     [SerializeField] private Rigidbody2D square;
     private InputSystem_Actions inputSystem_actions;
     private void Awake()
