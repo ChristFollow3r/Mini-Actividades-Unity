@@ -4,7 +4,7 @@ public class ObjectFollower : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D square;
     [SerializeField] private Rigidbody2D stalker;
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 3f;
 
     void Start()
     {
