@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class ObjectFollower : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private Rigidbody2D square;
+    [SerializeField] private Rigidbody2D stalker;
+    [SerializeField] private float speed = 5f;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        stalker.transform.position = Vector3.Lerp(stalker.transform.position, square.transform.position, Time.deltaTime * speed);
     }
 }
