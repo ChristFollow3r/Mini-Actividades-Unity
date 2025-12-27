@@ -2,15 +2,24 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float speed = 7f; // Mega massive yoink from the last exercise
+    [SerializeField] private Rigidbody2D square;
+    private InputSystem_Actions inputSystem_actions;
+    private void Awake()
     {
-        
+        inputSystem_actions = new InputSystem_Actions();
+        inputSystem_actions.Player.Enable();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        square.transform.Translate(GetMovement() * speed * Time.deltaTime);
+        Debug.Log(GetMovement());
+    }
+
+    Vector2 GetMovement()
+    {
+        Vector2 movement = inputSystem_actions.Player.Move.ReadValue<Vector2>();
+        return movement;
     }
 }
