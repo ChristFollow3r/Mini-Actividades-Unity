@@ -23,5 +23,3 @@ public class Movement : MonoBehaviour
         return movement;
     }
 }
-
-// I didnt use the position method but I think this is way better.
