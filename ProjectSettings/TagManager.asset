@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Interact
+  - Square1
+  - square2
+  - square1
   layers:
   - Default
   - TransparentFX
