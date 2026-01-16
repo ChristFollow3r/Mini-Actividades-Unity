@@ -5,13 +5,6 @@ public class MovemenetBruh : MonoBehaviour
     [SerializeField] private float speed = 7f;
     [SerializeField] private Rigidbody2D player;
 
-    // This exercise makes 0 sense
-    // private InputSystem_Actions inputSystem_actions;
-    // private void Awake()
-    // {
-    //     inputSystem_actions = new InputSystem_Actions();
-    //     inputSystem_actions.Player.Enable();
-    // }
 
     void Update()
     {
