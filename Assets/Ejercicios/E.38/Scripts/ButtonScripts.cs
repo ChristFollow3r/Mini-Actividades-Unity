@@ -8,5 +8,4 @@ public class ButtonScripts : MonoBehaviour
         Debug.Log("Im a button");
     }
 
-
 }
