@@ -59,9 +59,11 @@ public class PMovement_61 : MonoBehaviour
             counterBruh++;
 
             Destroy(newBall, 3f);
+
             // if (!newBall.IsDestroyed()) Debug.Log("Not destroyed");
             // else counterBruh--;
-            if (newBall.gameObject.IsDestroyed()) Debug.Log("Destroyed");
+            // if (newBall.gameObject.IsDestroyed()) Debug.Log("Destroyed");
+            // if (ball.IsDestroyed()) Debug.Log("Destroyed");
 
         }
     }
