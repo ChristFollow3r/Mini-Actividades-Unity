@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class PMovement_61 : MonoBehaviour
 {
@@ -35,7 +36,6 @@ public class PMovement_61 : MonoBehaviour
         if (counterXD <= 4 && targetTime <= 0) timer.text = "Time to take a dump!";
         if (counterXD >= 5 && targetTime <= 0) timer.text = "Poop rush time!";
         if (targetTime <= 0.0f) TimerEnded();
-        Debug.Log(targetTime);
     }
 
     void Movement()
@@ -50,15 +50,21 @@ public class PMovement_61 : MonoBehaviour
 
         if (space != 0)
         {
+            targetTime = 3f;
+            if (counterXD >= 5) targetTime = 0.5f;
             GameObject newBall = Instantiate(ball);
             newBall.transform.position = rb.transform.position;
-            targetTime = 5f;
+
             counterXD++;
             counterBruh++;
-            if (counterXD >= 5) targetTime = 0.5f;
-            Destroy(newBall, 5f);
+
+            Destroy(newBall, 3f);
+            // if (!newBall.IsDestroyed()) Debug.Log("Not destroyed");
+            // else counterBruh--;
+            if (newBall.gameObject.IsDestroyed()) Debug.Log("Destroyed");
+
         }
-
-
     }
+
+
 }
