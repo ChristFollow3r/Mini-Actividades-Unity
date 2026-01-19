@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
         {
             int sceneIndex = i;
             Button newButton = Instantiate(button, canvas);
+            newButton.GetComponentInChildren<TMP_Text>().text = (i + 1).ToString();
             newButton.onClick.AddListener(() => { SceneManager.LoadScene(sceneIndex); });
         }
     }
